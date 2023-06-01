@@ -1,0 +1,188 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(5%);
+  }
+
+  60% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc($size * 6);
+  z-index: 100;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc($size * -2);
+    left: -10%;
+    width: 120%;
+    height: calc($size * 8);
+    background: url(../img/clouds-line.png) center center no-repeat;
+    background-size: cover;
+    transform-origin: left;
+    animation: scroll 30s ease infinite;
+  }
+}
+
+.flying-intro {
+  max-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 75%;
+    left: -10%;
+    width: 120%;
+    height: calc($size * 20);
+    background: url(../img/clouds-line.png) center center no-repeat;
+    background-size: cover;
+    transform-origin: left;
+    animation: scroll 30s ease infinite;
+    z-index: 20;
+  }
+
+  &__back {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__front {
+    pointer-events: none;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+  }
+
+  &__text {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    color: #fbff00;
+    font: 400 calc($size * 2.5)/1.5 'Arial', serif;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 70%;
+
+    h1 {
+      font-family: Celestial;
+    }
+
+    p {
+      font-family: Flower;
+      font-size: calc($size * 1.5);
+    }
+  }
+
+  &__balls {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__ball {
+    pointer-events: none;
+    position: absolute;
+
+    &--1 {
+      top: 68%;
+      left: 15%;
+      width: calc($size * 11);
+    }
+
+    &--2 {
+      top: 37%;
+      left: 74%;
+      width: calc($size * 15);
+    }
+
+    &--3 {
+      top: 20%;
+      left: 30%;
+      width: calc($size * 10);
+    }
+
+    &--4 {
+      top: 20%;
+      left: 8%;
+      width: calc($size * 6);
+    }
+
+    &--5 {
+      top: 15%;
+      left: 57%;
+      width: calc($size * 7);
+    }
+
+    &--6 {
+      top: 30%;
+      left: 98%;
+      width: calc($size * 7);
+    }
+
+    &--7 {
+      top: 60%;
+      left: 87%;
+      width: calc($size * 9);
+    }
+
+    &--8 {
+      top: 60%;
+      left: 60%;
+      width: calc($size * 9);
+    }
+
+    &--9 {
+      top: 63%;
+      left: 44%;
+      width: calc($size * 8);
+    }
+
+    &--10 {
+      top: 12%;
+      left: 90%;
+      width: calc($size * 5);
+    }
+
+    &--11 {
+      top: 82%;
+      left: 80%;
+      width: calc($size * 6);
+    }
+  }
+}
+
+.parallax {
+  transition: transform 1s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}

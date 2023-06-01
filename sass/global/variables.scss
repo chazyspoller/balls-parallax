@@ -1,0 +1,19 @@
+$size: calc(1vw + 1vh);
+$color-sky: rgba(#1574a3, 0.8);
+
+@font-face {
+  font-family: Celestial;
+  src: url(../fonts/RubikPuddles-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+
+@font-face {
+  font-family: Flower;
+  src: url(../fonts/IndieFlower-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}

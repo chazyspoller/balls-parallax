@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import 'global/variables.scss';
+@import 'blocks/flying-intro';
+@import 'blocks/info';
+
+body {
+  background-color: $color-sky;
+}
+
+main {
+  overflow: hidden;
+}
